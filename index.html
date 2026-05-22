@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light" style=""><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet" data-editor-preserved="true">
+    
+    
+    <title>София Агачер | Писатель, врач, PhD — Официальный сайт</title>
+    
+    
+    
+    
+
+    <style>
+      :root {
+        --text-main: #1c2331;
+        --text-light: #4a5568;
+        --bg-main: #fdfcfb;
+        --fuchsia: #d81b60;
+        --turquoise: #0c8599;
+        --amber: #f59f00;
+        --card-bg: #ffffff;
+        --border-light: rgba(0, 0, 0, 0.08);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--text-main);
+        background-color: var(--bg-main);
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        line-height: 1.6;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      .literary {
+        font-family: 'Cormorant Garamond', serif;
+      }
+
+      .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 24px;
+        position: relative;
+        z-index: 10;
+      }
+
+      /* Background Blurs */
+      .bg-blur {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(100px);
+        opacity: 0.12;
+        z-index: 0;
+        pointer-events: none;
+      }
+      .blur-1 {
+        top: -200px;
+        left: -200px;
+        width: 600px;
+        height: 600px;
+        background: var(--fuchsia);
+      }
+      .blur-2 {
+        top: 800px;
+        right: -200px;
+        width: 700px;
+        height: 700px;
+        background: var(--turquoise);
+      }
+      .blur-3 {
+        top: 2200px;
+        left: -100px;
+        width: 500px;
+        height: 500px;
+        background: var(--amber);
+      }
+      .blur-4 {
+        bottom: -200px;
+        right: 10%;
+        width: 600px;
+        height: 600px;
+        background: var(--fuchsia);
+      }
+
+      /* Header */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(253, 252, 251, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border-light);
+        padding: 16px 0;
+      }
+
+      .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--text-main);
+        letter-spacing: 0.5px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text-main);
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--fuchsia);
+      }
+
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        color: var(--text-main);
+        cursor: pointer;
+      }
+
+      /* Hero Section */
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+        padding: 100px 0 80px;
+      }
+
+      .hero-content h1 {
+        font-size: 4rem;
+        margin: 0 0 12px;
+        line-height: 1.1;
+        color: var(--text-main);
+      }
+
+      .hero-content h2 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: var(--text-light);
+        margin: 0 0 32px;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .chips {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+      }
+
+      .chip {
+        background: rgba(12, 133, 153, 0.08);
+        color: var(--turquoise);
+        padding: 6px 16px;
+        border-radius: 100px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border: 1px solid rgba(12, 133, 153, 0.2);
+      }
+
+      .hero-desc {
+        font-size: 1.1rem;
+        color: var(--text-main);
+        margin-bottom: 40px;
+      }
+
+      .hero-desc ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .hero-desc li {
+        margin-bottom: 12px;
+        position: relative;
+        padding-left: 24px;
+      }
+
+      .hero-desc li::before {
+        content: '✦';
+        position: absolute;
+        left: 0;
+        color: var(--amber);
+        font-size: 1rem;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 16px;
+      }
+
+      .btn {
+        padding: 14px 32px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        font-size: 0.95rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--fuchsia), #9b2c2c);
+        color: #fff;
+        box-shadow: 0 4px 15px rgba(216, 27, 96, 0.3);
+      }
+
+      .btn-primary:hover {
+        box-shadow: 0 6px 20px rgba(216, 27, 96, 0.4);
+        transform: translateY(-2px);
+      }
+
+      .btn-outline {
+        border: 2px solid var(--text-main);
+        color: var(--text-main);
+      }
+
+      .btn-outline:hover {
+        background: var(--text-main);
+        color: #fff;
+      }
+
+      /* Hero Image Art Card */
+      .hero-image-container {
+        position: relative;
+        max-width: 480px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .hero-image-wrapper {
+        position: relative;
+        background: linear-gradient(135deg, var(--fuchsia), var(--turquoise), var(--amber));
+        padding: 4px;
+        border-radius: 20px;
+        z-index: 2;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      }
+
+      .hero-image-wrapper img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 16px;
+        object-fit: cover;
+      }
+
+      .glow {
+        position: absolute;
+        top: -5%;
+        left: -5%;
+        right: -5%;
+        bottom: -5%;
+        background: linear-gradient(135deg, var(--fuchsia), var(--turquoise), var(--amber));
+        filter: blur(40px);
+        opacity: 0.4;
+        z-index: 1;
+        border-radius: 30px;
+      }
+
+      /* Sections */
+      section {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        font-size: 2.75rem;
+        text-align: center;
+        margin: 0 0 56px 0;
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--text-main);
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 25%;
+        width: 50%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--fuchsia), var(--turquoise));
+        border-radius: 2px;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .intro-text {
+        max-width: 800px;
+        margin: 0 auto 48px;
+        font-size: 1.15rem;
+        color: var(--text-light);
+      }
+
+      /* About Section */
+      .about-content {
+        background: var(--card-bg);
+        border-radius: 24px;
+        padding: 48px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+        border: 1px solid var(--border-light);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .about-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6px;
+        height: 100%;
+        background: linear-gradient(to bottom, var(--amber), var(--fuchsia));
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .about-text p {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+      }
+
+      .about-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .about-list li {
+        padding: 16px 0;
+        border-bottom: 1px solid var(--border-light);
+        display: flex;
+        align-items: center;
+      }
+
+      .about-list li:last-child {
+        border-bottom: none;
+      }
+
+      .about-list li strong {
+        min-width: 140px;
+        color: var(--turquoise);
+      }
+
+      /* Cards Grid (Books, Projects) */
+      .grid-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+      }
+
+      .card {
+        background: var(--card-bg);
+        border-radius: 16px;
+        padding: 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--border-light);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12);
+      }
+
+      .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--turquoise), var(--fuchsia));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2;
+      }
+
+      .card:hover::before {
+        opacity: 1;
+      }
+
+      /* Book cover image */
+      .card-cover {
+        width: 100%;
+        aspect-ratio: 3/4;
+        overflow: hidden;
+        position: relative;
+        background: linear-gradient(135deg, rgba(216,27,96,0.08), rgba(12,133,153,0.08));
+      }
+
+      .card-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .card:hover .card-cover img {
+        transform: scale(1.04);
+      }
+
+      /* Card body (text + link) */
+      .card-body {
+        padding: 28px 28px 28px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .card h3 {
+        font-size: 1.5rem;
+        margin: 0 0 12px 0;
+        color: var(--text-main);
+        line-height: 1.25;
+      }
+
+      .card p {
+        color: var(--text-light);
+        flex-grow: 1;
+        margin-bottom: 24px;
+        font-size: 0.95rem;
+      }
+
+      .card-link {
+        display: inline-flex;
+        align-items: center;
+        color: var(--fuchsia);
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+      }
+
+      .card-link::after {
+        content: '→';
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .card-link:hover {
+        color: #9b2c2c;
+      }
+
+      .card-link:hover::after {
+        transform: translateX(4px);
+      }
+
+      /* Projects cards keep old padding style */
+      .card.no-cover {
+        padding: 40px 32px;
+      }
+
+      /* Plays & Scripts Accent Quote */
+      .accent-quote {
+        background: linear-gradient(135deg, rgba(216, 27, 96, 0.04), rgba(12, 133, 153, 0.04));
+        border-left: 4px solid var(--fuchsia);
+        padding: 40px 56px;
+        border-radius: 0 24px 24px 0;
+        margin: 56px 0;
+        font-size: 2.2rem;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        color: var(--text-main);
+        line-height: 1.3;
+        position: relative;
+      }
+
+      .scripts-list {
+        font-size: 1.1rem;
+        color: var(--text-main);
+        list-style: none;
+        padding: 0;
+      }
+
+      .scripts-list li {
+        margin-bottom: 24px;
+        padding-left: 32px;
+        position: relative;
+      }
+
+      .scripts-list li::before {
+        content: '🎬';
+        position: absolute;
+        left: 0;
+        top: 2px;
+      }
+
+      /* Links / Resources Grid */
+      .resource-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 16px;
+        margin-bottom: 48px;
+      }
+
+      .resource-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 24px;
+        background: var(--card-bg);
+        border: 1px solid var(--border-light);
+        border-radius: 12px;
+        text-decoration: none;
+        color: var(--text-main);
+        font-weight: 500;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .resource-link:hover {
+        border-color: var(--turquoise);
+        color: var(--turquoise);
+        box-shadow: 0 6px 15px rgba(12, 133, 153, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .resource-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 24px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+      }
+
+      /* Timeline (Events) */
+      .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        padding-left: 32px;
+        border-left: 2px solid rgba(216, 27, 96, 0.2);
+      }
+
+      .timeline-item {
+        position: relative;
+        padding-bottom: 40px;
+      }
+
+      .timeline-item:last-child {
+        padding-bottom: 0;
+      }
+
+      .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -40px;
+        top: 0;
+        width: 14px;
+        height: 14px;
+        background: var(--bg-main);
+        border: 3px solid var(--fuchsia);
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px var(--bg-main);
+      }
+
+      .timeline-date {
+        font-weight: 600;
+        color: var(--fuchsia);
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+      }
+
+      .timeline-content {
+        background: var(--card-bg);
+        padding: 24px 32px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        border: 1px solid var(--border-light);
+      }
+
+      .timeline-content p {
+        margin: 0;
+        font-size: 1.05rem;
+      }
+
+      /* Footer & Contacts */
+      .contacts-wrapper {
+        background: var(--text-main);
+        color: #fff;
+        border-radius: 24px;
+        padding: 64px;
+        text-align: center;
+        margin-bottom: 40px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .contacts-wrapper::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--fuchsia), var(--turquoise), var(--amber));
+      }
+
+      .contacts-wrapper h2 {
+        color: #fff;
+        margin-bottom: 32px;
+      }
+
+      .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 32px;
+      }
+
+      .social-link {
+        padding: 12px 24px;
+        border-radius: 100px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .social-link:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .email-link {
+        display: inline-block;
+        font-size: 1.25rem;
+        color: var(--amber);
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: color 0.3s ease;
+      }
+
+      .email-link:hover {
+        color: #fff;
+      }
+
+      footer {
+        text-align: center;
+        padding: 32px 0;
+        border-top: 1px solid var(--border-light);
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 64px;
+        }
+        .hero-content h1 {
+          font-size: 3.2rem;
+        }
+        .chips {
+          justify-content: center;
+        }
+        .hero-desc li {
+          padding-left: 0;
+        }
+        .hero-desc li::before {
+          display: none;
+        }
+        .hero-buttons {
+          justify-content: center;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        .accent-quote {
+          font-size: 1.8rem;
+          padding: 32px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: rgba(253, 252, 251, 0.98);
+          padding: 24px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+          border-bottom: 1px solid var(--border-light);
+        }
+        .nav-links.active {
+          display: flex;
+        }
+        .section-title {
+          font-size: 2.2rem;
+        }
+        .contacts-wrapper {
+          padding: 40px 24px;
+        }
+        .card {
+          padding: 32px 24px;
+        }
+      }
+    </style>
+  </head>
+  <body style="">
+    
+    <div class="bg-blur blur-1"></div>
+    <div class="bg-blur blur-2"></div>
+    <div class="bg-blur blur-3"></div>
+    <div class="bg-blur blur-4"></div>
+
+    
+    <header>
+      <div class="container header-inner">
+        <a href="#" class="logo">София Агачер</a>
+        <button class="menu-toggle" aria-label="Открыть меню">☰</button>
+        <ul class="nav-links">
+          <li><a href="#about">Об авторе</a></li>
+          <li><a href="#books">Книги</a></li>
+          <li><a href="#scripts">Сценарии</a></li>
+          <li><a href="#projects">Проекты</a></li>
+          <li><a href="#read">Читать</a></li>
+          <li><a href="#events">События</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      
+      <section class="hero container">
+        <div class="hero-content">
+          <h2>Писатель, врач, PhD</h2>
+          <h1>София Агачер</h1>
+
+          <div class="chips">
+            <span class="chip">4 книги</span>
+            <span class="chip">Пьесы и сценарии</span>
+            <span class="chip">Международные проекты</span>
+            <span class="chip">Москва / США</span>
+          </div>
+
+          <div class="hero-desc">
+            <ul>
+              <li>Лауреат первой Национальной литературной премии им. Гранина — 2025</li>
+              <li>Номинант премии «Гипертекст» им. Чаковского — 2026</li>
+              <li>Член Союза писателей России и The Authors Guild (США)</li>
+            </ul>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#books" class="btn btn-primary">Смотреть книги</a>
+            <a href="#contacts" class="btn btn-outline">Связаться</a>
+          </div>
+        </div>
+
+        <div class="hero-image-container">
+          <div class="glow"></div>
+          <div class="hero-image-wrapper">
+            <img src="sofia-agacher.jpg" alt="Портрет Софии Агачер" data-height-listener-added="true">
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="about" class="container">
+        <h2 class="section-title">Об авторе</h2>
+        <div class="about-content">
+          <div class="about-grid">
+            <div class="about-text">
+              <p><strong>София Агачер</strong> — литературный псевдоним Елены Васильевны Клименковой.</p>
+              <p>
+                В её текстах гармонично переплетаются глубокий медицинский опыт, внимательное отношение к человеческой
+                природе, философские размышления и искренняя любовь к жизни. Автор создаёт произведения, в которых
+                каждый читатель находит отражение собственного пути.
+              </p>
+            </div>
+            <ul class="about-list">
+              <li><strong>Дата рождения</strong> 23 июля 1961 года (Гомель, Беларусь)</li>
+              <li><strong>Образование</strong> Минский медицинский институт (с отличием), школа с золотой медалью</li>
+              <li><strong>Профессия</strong> Врач анестезиолог-реаниматолог</li>
+              <li><strong>Научная степень</strong> Аспирантура 1-го ММИ, защита диссертации</li>
+              <li><strong>География</strong> Живёт и работает в Москве и США</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="books" class="container">
+        <h2 class="section-title">Книги</h2>
+        <div class="grid-cards">
+          <div class="card">
+            <div class="card-cover">
+              <img src="cover-tvoimi-glazami.jpg" alt="Обложка книги Твоими глазами">
+            </div>
+            <div class="card-body">
+              <h3>Твоими глазами</h3>
+              <p>
+                Роман о судьбах трёх друзей, встретившихся на Всемирном фестивале молодёжи и студентов 1957 года. Глубокое
+                погружение в темы свободы, любви, дружбы, исторической памяти и взаимопонимания поколений.
+              </p>
+              <div>
+                <a href="https://agacher-tvoimi-glazami.vercel.app" target="_blank" rel="noopener noreferrer" class="card-link">Подробнее о книге</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-cover">
+              <img src="cover-puteshestvie.jpg" alt="Обложка книги Путешествие внутри себя">
+            </div>
+            <div class="card-body">
+              <h3>Путешествие внутри себя</h3>
+              <p>
+                Философский роман-путешествие о поиске родовых корней, неразрывной связи поколений и глубоком внутреннем
+                пути героини через города и культуры.
+              </p>
+              <div>
+                <a href="https://agacher-pvs-book.vercel.app" target="_blank" rel="noopener noreferrer" class="card-link">Подробнее о книге</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-cover">
+              <img src="cover-istselenie.webp" alt="Обложка книги Исцеление мира">
+            </div>
+            <div class="card-body">
+              <h3>Исцеление мира.<br>Журнал Рыси и Нэта</h3>
+              <p>
+                Масштабный роман о природе и человеке, боли и исцелении, науке будущего и последствиях Чернобыля. Книга о
+                великом доверии и надежде на жизнь.
+              </p>
+              <div>
+                <a href="https://agacher.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-link">Подробнее о книге</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-cover">
+              <img src="cover-shest-minut.jpg" alt="Обложка книги Шесть минут">
+            </div>
+            <div class="card-body">
+              <h3>Шесть минут</h3>
+              <p>
+                Сборник прозы из 24 рассказов, вдохновлённых самой жизнью, реальным медицинским опытом, дальними
+                путешествиями и внутренней стойкостью. У многих текстов доступны аудиоверсии.
+              </p>
+              <div>
+                <a href="https://six-minutes-book.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-link">Подробнее о книге</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="container">
+        <h2 class="section-title">Пьесы и сценарии</h2>
+        <p class="text-center intro-text">
+          София Агачер — признанный автор не только прозы, но также пьес и сценариев. Её литературные миры активно
+          адаптируются для сцены и кинематографа.
+        </p>
+
+        <ul class="scripts-list">
+          <li>
+            По роману <strong>«Твоими глазами»</strong> совместно с Александром Вавиловым (автором сценической
+            адаптации) создана одноимённая пьеса и масштабный музыкально-драматический проект (мюзикл).
+          </li>
+          <li>
+            По роману <strong>«Исцеление мира. Журнал Рыси и Нэта»</strong> ведётся активная работа над сценарием
+            8-серийного фильма. Сериал планируется к съёмкам национальной киностудией «Беларусьфильм» в 2027–2028 годах.
+          </li>
+        </ul>
+
+        <div class="accent-quote">
+          «Истории Софии Агачер продолжают жизнь на сцене и на экране, обретая новые голоса и смыслы.»
+        </div>
+      </section>
+
+      
+      <section id="projects" class="container">
+        <h2 class="section-title">Конкурсы и фестивали</h2>
+        <p class="text-center intro-text">
+          Автор не только пишет книги, но и создаёт важные культурные пространства, возрождающие традиции семейного
+          чтения и поддерживающие развитие детского театрального искусства.
+        </p>
+
+        <div class="grid-cards">
+          <div class="card no-cover">
+            <h3>Мы и наши маленькие волшебники!</h3>
+            <p>
+              Международный конкурс короткого семейного рассказа, основанный в 2018 году Софией Агачер и Алексеем
+              Ходорычем. Проект объединяет разные поколения через совместное чтение, написание рассказов и пьес. Участие
+              для всех авторов бесплатное.
+            </p>
+            <div>
+              <a href="https://konkurs-minmv.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-link">Официальный сайт конкурса</a>
+            </div>
+          </div>
+
+          <div class="card no-cover">
+            <h3>Живая книга</h3>
+            <p>
+              Масштабный фестиваль детских (школьных) и юношеских коллективов имени В. К. Бегунова. Культурный проект
+              существует с 2018 года, объединяет живые сценические постановки и аудиоспектакли, оказывая поддержку юным
+              талантам.
+            </p>
+            <div>
+              <a href="https://festival-zhivaya-kniga.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-link">Официальный сайт фестиваля</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="read" class="container">
+        <h2 class="section-title">Где читать и слушать</h2>
+        <p class="text-center intro-text">
+          Произведения Софии Агачер доступны для бесплатного чтения онлайн на популярных литературных порталах, а также
+          в авторском аудиоисполнении. Печатные издания представлены на авторском сайте и в Taplink.
+        </p>
+
+        <h3 class="resource-subtitle">Читать онлайн бесплатно:</h3>
+        <div class="resource-grid">
+          <a href="https://litmarket.ru/reader/shest-minut-3?page=1" target="_blank" rel="noopener noreferrer" class="resource-link">Литмаркет</a>
+          <a href="https://www.chitalnya.ru/work/4310343/" target="_blank" rel="noopener noreferrer" class="resource-link">Изба-Читальня</a>
+          <a href="https://author.today/work/575611" target="_blank" rel="noopener noreferrer" class="resource-link">Author.Today</a>
+          <a href="https://litsovet.ru/books/999546-shest-minut" target="_blank" rel="noopener noreferrer" class="resource-link">Литсовет</a>
+          <a href="https://proza.ru/avtor/agachers" target="_blank" rel="noopener noreferrer" class="resource-link">Проза.ру</a>
+        </div>
+
+        <h3 class="resource-subtitle">Слушать в авторском исполнении:</h3>
+        <div class="resource-grid">
+          <a href="https://www.youtube.com/channel/UCoXj9MyHt80OaRlFnff-nPw" target="_blank" rel="noopener noreferrer" class="resource-link">YouTube Канал</a>
+          <a href="https://vk.com/public211448735" target="_blank" rel="noopener noreferrer" class="resource-link">VK Видео / Сообщество</a>
+        </div>
+      </section>
+
+      
+      <section id="events" class="container">
+        <h2 class="section-title">События и презентации</h2>
+        <p class="text-center intro-text">Ближайшие встречи с читателями и культурные мероприятия.</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">30 мая, 13:00</div>
+            <div class="timeline-content">
+              <p>
+                <strong>Гомельская областная библиотека</strong> — фестиваль #читайгомель. Состоится театрализованная
+                читка мюзикла «Твоими глазами».
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">5 июня, 19:15</div>
+            <div class="timeline-content">
+              <p>
+                <strong>Москва, Красная площадь</strong> — презентация на художественном стенде одноименного книжного
+                фестиваля.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">17 июня</div>
+            <div class="timeline-content">
+              <p><strong>Санкт-Петербург, Дом Зингера</strong> — большая творческая встреча с читателями.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="contacts" class="container">
+        <div class="contacts-wrapper">
+          <h2 class="literary" style="font-size: 2.5rem">Будем на связи</h2>
+
+          <div class="social-links">
+            <a href="https://agacher.com" target="_blank" rel="noopener noreferrer" class="social-link">Авторский сайт</a>
+            <a href="https://taplink.cc/sofiaagacher" target="_blank" rel="noopener noreferrer" class="social-link">Taplink</a>
+            <a href="https://vk.com/sofiaagacher" target="_blank" rel="noopener noreferrer" class="social-link">ВКонтакте (Личная)</a>
+            <a href="https://vk.com/public211448735" target="_blank" rel="noopener noreferrer" class="social-link">ВКонтакте (Группа)</a>
+            <a href="https://www.instagram.com/sofiaagacher/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
+            <a href="https://sofia-agacher.livejournal.com/" target="_blank" rel="noopener noreferrer" class="social-link">LiveJournal</a>
+            <a href="https://www.livelib.ru/author/1181056-sofiya-agacher" target="_blank" rel="noopener noreferrer" class="social-link">LiveLib</a>
+          </div>
+
+          <div style="margin-top: 24px">
+            <p style="margin-bottom: 8px; opacity: 0.8">По вопросам сотрудничества:</p>
+            <a href="mailto:Agacher.bragbook@gmail.com" class="email-link">Agacher.bragbook@gmail.com</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2026 Персональный сайт Софии Агачер. Все права защищены.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        // Toggle mobile menu
+        menuToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          navLinks.classList.toggle('active');
+          menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close menu when clicking a link
+        navItems.forEach(item => {
+          item.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuToggle.textContent = '☰';
+          });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            navLinks.classList.remove('active');
+            menuToggle.textContent = '☰';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
