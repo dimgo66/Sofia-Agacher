@@ -630,6 +630,45 @@
         font-size: 1.05rem;
       }
 
+      /* Featured (nearest) event */
+      .timeline-item--featured::before {
+        width: 18px;
+        height: 18px;
+        left: -42px;
+        top: -3px;
+        background: var(--fuchsia);
+        box-shadow:
+          0 0 0 4px var(--bg-main),
+          0 0 0 9px rgba(216, 27, 96, 0.18);
+      }
+
+      .timeline-item--featured .timeline-date {
+        display: inline-block;
+        background: var(--fuchsia);
+        color: #fff;
+        padding: 4px 16px;
+        border-radius: 999px;
+        font-size: 0.95rem;
+        margin-bottom: 14px;
+      }
+
+      .timeline-item--featured .timeline-content {
+        background: linear-gradient(180deg, rgba(216, 27, 96, 0.06), rgba(216, 27, 96, 0) 60%), var(--card-bg);
+        border: 2px solid rgba(216, 27, 96, 0.35);
+        box-shadow: 0 10px 30px rgba(216, 27, 96, 0.12);
+      }
+
+      .timeline-badge {
+        display: inline-block;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--fuchsia);
+        margin-bottom: 8px;
+      }
+
       /* Footer & Contacts */
       .contacts-wrapper {
         background: var(--text-main);
@@ -1008,18 +1047,26 @@
         <p class="text-center intro-text">Ближайшие встречи с читателями и культурные мероприятия.</p>
 
         <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-date">30 мая, 13:00</div>
+          <div class="timeline-item timeline-item--featured">
+            <div class="timeline-badge">Ближайшее событие</div>
+            <div class="timeline-date">14 ноября 2026, 12:00</div>
             <div class="timeline-content">
               <p>
-                <strong>Гомельская областная библиотека</strong> — фестиваль #читайгомель. Состоится театрализованная
-                читка мюзикла «Твоими глазами».
+                <strong>Московский Дом Книги</strong> — финал Международного конкурса короткого семейного рассказа и
+                короткой пьесы «Мы и наши маленькие волшебники!».
               </p>
             </div>
           </div>
 
           <div class="timeline-item">
-            <div class="timeline-date">5 июня, 19:15</div>
+            <div class="timeline-date">17 июня 2026</div>
+            <div class="timeline-content">
+              <p><strong>Санкт-Петербург, Дом Зингера</strong> — большая творческая встреча с читателями.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">5 июня 2026, 19:15</div>
             <div class="timeline-content">
               <p>
                 <strong>Москва, Красная площадь</strong> — презентация на художественном стенде одноименного книжного
@@ -1029,9 +1076,12 @@
           </div>
 
           <div class="timeline-item">
-            <div class="timeline-date">17 июня</div>
+            <div class="timeline-date">30 мая 2026, 13:00</div>
             <div class="timeline-content">
-              <p><strong>Санкт-Петербург, Дом Зингера</strong> — большая творческая встреча с читателями.</p>
+              <p>
+                <strong>Гомельская областная библиотека</strong> — фестиваль #читайгомель. Состоится театрализованная
+                читка мюзикла «Твоими глазами».
+              </p>
             </div>
           </div>
         </div>
