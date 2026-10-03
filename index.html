@@ -506,6 +506,38 @@
         padding: 40px 32px;
       }
 
+      /* Upcoming edition card (no cover art yet) */
+      .card.card-upcoming {
+        border-style: dashed;
+        border-color: rgba(12, 133, 153, 0.45);
+        background: linear-gradient(135deg, rgba(12, 133, 153, 0.05), rgba(216, 27, 96, 0.05));
+      }
+
+      .card-badge {
+        display: inline-block;
+        align-self: flex-start;
+        margin-bottom: 16px;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, var(--turquoise), var(--fuchsia));
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .card-note {
+        flex-grow: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 18px;
+        border-top: 1px solid var(--border-light);
+      }
+
+      .card-note .card-link {
+        margin-left: 4px;
+      }
+
       /* Plays & Scripts Accent Quote */
       .accent-quote {
         background: linear-gradient(135deg, rgba(216, 27, 96, 0.04), rgba(12, 133, 153, 0.04));
@@ -955,6 +987,21 @@
               </div>
             </div>
           </div>
+
+          <div class="card card-upcoming">
+            <div class="card-body">
+              <span class="card-badge">Готовится в печать</span>
+              <h3>Рассказы о Ромке и его бабушке</h3>
+              <p>
+                Серия из 7 книг на русском и английском языках — тёплые истории о дружбе мальчика и его бабушки,
+                о семейных традициях, любознательности и больших открытиях в маленьком мире детства.
+              </p>
+              <p class="card-note">
+                Предварительный заказ можно сделать на сайте:
+                <a href="https://o-romke-and-babushke.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-link">оформить предзаказ</a>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -970,10 +1017,12 @@
           <li>
             По роману <strong>«Твоими глазами»</strong> совместно с Александром Вавиловым (автором сценической
             адаптации) создана одноимённая пьеса и масштабный музыкально-драматический проект (мюзикл).
+            <br>Написан пилот сериала по этому роману.
           </li>
           <li>
             По роману <strong>«Исцеление мира. Журнал Рыси и Нэта»</strong> ведётся активная работа над сценарием
             8-серийного фильма. Сериал планируется к съёмкам национальной киностудией «Беларусьфильм» в 2027–2028 годах.
+            <br>Написан пилот сериала по этому роману.
           </li>
         </ul>
 
